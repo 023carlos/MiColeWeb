@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #1e3a8a;
+    padding: 10px 20px;
+    color: black;
+}
+
+.contenedor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 70px;
+    width: 120%;
+    border-radius: 20px;
+
+}
+
+.redes-sociales {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.redes-sociales img {
+    width: 24px;
+    height: 24px;
+}
+
+.btn-entrar {
+    padding: 6px 12px;
+    background-color: #f59e0b;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.barraNavegacion {
+    background-color: #3B82F6;
+}
+
+.barra {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+
+
+
+.contenedor-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contenedor-footer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ffce00;
+
+}
+
+.contenedor-footer p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+.enlaces-rapidos {
+    margin: 1rem 0;
+}
+
+.enlaces-rapidos a {
+    color: #ffffff;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer {
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+/* Contenedor principal de la sección de contacto */
+.seccion-contacto {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color:#BFDBFE;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Títulos principales y secundarios */
+.seccion-contacto h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+.seccion-contacto h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #34495e;
+  border-bottom: 2px solid #2980b9;
+  padding-bottom: 5px;
+}
+
+/* Datos básicos de contacto */
+.datos-contacto p,
+.contacto-departamentos ul {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Lista de contactos por área */
+.contacto-departamentos ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contacto-departamentos li {
+  margin-bottom: 10px;
+}
+
+/* Dirección y mapa */
+.ubicacion p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.ubicacion iframe {
+  width: 100%;
+  height: 250px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Formulario de contacto */
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formulario label {
+  font-weight: bold;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  border-color: #2980b9;
+  outline: none;
+}
+
+.formulario button {
+  width: 130px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #2980b9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+  background-color: #1c5980;
+}
+
+/* Redes sociales */
+.redes a {
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+.redes a:hover {
+  text-decoration: underline;
+}
+
+/* Preguntas frecuentes */
+.faq details {
+  margin-bottom: 15px;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.faq summary {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.05rem;
+}
+
+.faq p {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Diseño responsive */
+@media (max-width: 600px) {
+  .seccion-contacto {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  .formulario button {
+    width: 100%;
+  }
+}

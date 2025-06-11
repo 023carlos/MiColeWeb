@@ -7,9 +7,9 @@
 
 
 header {
-  background-color: #1e3a8a; /* o el color de fondo que desees */
+  background-color: #1e3a8a;
   padding: 10px 20px;
-  color:black;
+  color: black;
 }
 
 .contenedor-header {
@@ -23,7 +23,7 @@ header {
   height: 70px;
   width: 120%;
   border-radius: 20px;
-  
+
 }
 
 .redes-sociales {
@@ -39,23 +39,25 @@ header {
 
 .btn-entrar {
   padding: 6px 12px;
-  background-color:#f59e0b;
+  background-color: #f59e0b;
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
 }
-.barraNavegacion{
-    background-color:#3B82F6 ;
+
+.barraNavegacion {
+  background-color: #3B82F6;
 }
-.barra{
-   list-style: none;
-   display: flex;
-   justify-content: center;
-   gap: 70px;
-    padding: 10px 20px;
-    font-size: 20px;
-}    
+
+.barra {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  padding: 10px 20px;
+  font-size: 20px;
+}
 
 nav ul li a {
   color: white;
@@ -64,25 +66,28 @@ nav ul li a {
 }
 
 
-.DescubreMas{
+.DescubreMas {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.ImgDescubre{
+
+.ImgDescubre {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.img{
+
+.img {
   width: 100%;
   height: auto;
 }
-.Descubre{
- position: absolute;
+
+.Descubre {
+  position: absolute;
   left: 40px;
   top: 40%;
   transform: translateY(-50%);
@@ -93,34 +98,38 @@ nav ul li a {
   height: 350px;
   color: white;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-align-items: center;
+  align-items: center;
 }
-.h2{
+
+.h2 {
   font-size: 50px;
   color: white;
   justify-content: ;
   display: flex;
 }
-.p{
+
+.p {
   font-size: 20px;
   margin-bottom: 20px;
   color: white;
   justify-content: center;
   padding: 20px;
 }
-.btn{
-  background-color:#f59e0b;
+
+.btn {
+  background-color: #f59e0b;
   color: white;
   padding: 20px;
   border-radius: 20px;
- margin-left: 35%;
+  margin-left: 35%;
+  border-color: #f59e0b;
 
 }
 
 
 
 footer {
-  background-color:#1f2937 ;
+  background-color: #1f2937;
   color: #ffffff;
   padding: 2rem 1rem;
   font-family: 'Segoe UI', sans-serif;
@@ -135,7 +144,8 @@ footer {
 .contenedor-footer h4 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #ffce00; /* Amarillo llamativo */
+  color: #ffce00;
+  /* Amarillo llamativo */
 }
 
 .contenedor-footer p {
@@ -158,30 +168,32 @@ footer {
   text-decoration: none;
   transition: color 0.3s ease;
 }
+
 .redes-sociales a img {
   width: 30px;
   height: 30px;
   margin: 0 0.3rem;
-  filter: brightness(0) invert(1); /* Iconos blancos */
+  filter: brightness(0) invert(1);
   transition: transform 0.3s ease;
 }
 
 
 
-.Bienvenida{
+.Bienvenida {
   justify-content: center;
-   justify-items: center;
+  justify-items: center;
 }
 
 
-.h2Bienvenida{
+.h2Bienvenida {
   font-size: 60px;
   justify-items: center;
   color: #1e3a8a;
   padding: 19px;
-  
+
 }
-.pBienvenida{
+
+.pBienvenida {
   justify-items: center;
   padding: 10px;
   width: 1000px;
@@ -195,27 +207,28 @@ footer {
 
 }
 
-.imgEstudiante{
+.imgEstudiante {
   width: 760px;
- height: 100%;
-}
-.imgEstudiante2{
-    width: 760px;
   height: 100%;
 }
-.bloque{
-  display: flex;
-  justify-items: center; 
+
+.imgEstudiante2 {
+  width: 760px;
+  height: 100%;
 }
-.divEstudiante{
-  background:linear-gradient(to right, #E0F2FE,#F0FDF4);
+
+.bloque {
+  display: flex;
+  justify-items: center;
+}
+
+.divEstudiante {
+  background: linear-gradient(to right, #E0F2FE, #F0FDF4);
   justify-items: center;
 }
 
 
-
-
-.h3Estudiante{
+.h3Estudiante {
   color: #1e3a8a;
   font-weight: bold;
   font-size: 50px;
@@ -225,191 +238,18 @@ footer {
   padding-top: 30px;
 }
 
-.pEstudiante{
+.pEstudiante {
   font-size: 20px;
   margin-bottom: 20px;
-  color:#374151;
+  color: #374151;
   justify-content: center;
   padding: 50px;
 }
 
-
-
-
-
-
-/* .bloque{
-  display: flex;
-  justify-content: center;
-}
-
-.divEstudiante{
-  width: 50%;
+.btn2 {
+  background-color: #f59e0b;
   color: white;
-   justify-items: center;
+  padding: 20px;
+  border-radius: 30px;
+  border-color: #f59e0b;
 }
-.divEstudiante2{
-  width: 50%;
-  color: white;
-   justify-items: center;
-}
-.divImgEsudiante{
-  
-   width: 100%;
-
-}
-.imgEstudiante{
- width: 50%;
-  height: auto;
-    justify-content: right;
-}
-.imgEstudiante2{
-   width: 50%;
-  height: auto;
-   justify-content: left;
-}
-.divImgEstudiantes2{
-    width: 100%;
-  justify-content: left;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
-}
-
-
-header {
-  background-color: #004080;
-  color: #fff;
-  padding: 20px 0;
-}
-
-header .logo {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin-top: 10px;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-
-.hero {
-  background-image: url('img/escuela.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 100px 20px;
-  text-align: center;
-  color: #fff;
-}
-
-.hero .contenido-hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.hero .contenido-hero p {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-.hero .btn {
-  background-color: #ffcc00;
-  color: #004080;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-}
-
-.hero .btn:hover {
-  background-color: #e6b800;
-}
-
-
-.informacion {
-  padding: 60px 20px;
-  background-color: #fff;
-}
-
-.informacion .contenedor {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.informacion h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-}
-
-footer {
-  background-color: #004080;
-  color: #fff;
-  padding: 20px 0;
-}
-
-footer .contenedor-footer {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-footer .redes-sociales a {
-  margin: 0 10px;
-  display: inline-block;
-}
-
-footer .redes-sociales img {
-  width: 24px;
-  height: 24px;
-} */

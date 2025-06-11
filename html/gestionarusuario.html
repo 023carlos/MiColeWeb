@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/usuario.js"></script>
+    <script src="../js/utilidades.js"></script>
+    <script src="../js/gestionarusuarios.js"></script>
+</head>
+<body>
+    
+    <h1>Gestión de Usuarios</h1>
+
+
+    <form id="usuarios">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" required autofocus> <br>
+        <label for="password">Password</label>
+        <input type="password" id="password" required><br>
+        <label for="tipoUsuario">Tipo Usuario</label>
+        <select name="" id="tipoUsuario">
+            <option value="administrador">Administrador</option>
+            <option value="docente">Docente</option>
+            <option value="estudiante">Estudiante</option>
+        </select>
+
+    </form>
+
+    <button onclick="guardar()">Guardar</button>
+
+
+</body>
+</html>
