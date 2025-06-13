@@ -1,11 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudiante</title>
+  <meta charset="UTF-8">
+  <title>Menu Estudiante</title>
+  <link rel="stylesheet" href="../css/menudocente.css"> <!-- Puedes cambiar el estilo si deseas -->
+  <script src="../js/utilidades.js"></script>
+  <script src="../js/menuestudiante.js" defer></script>
+  <script src="../js/horarioestudiante.js"></script>
+  <script src="../js/actividadesestudiante.js"></script>
+  <script src="../js/camviarcontraseñaestudiante.js"></script>
 </head>
 <body>
-    
+
+<header class="top-header">
+  <div class="logo">miColeWeb</div>
+  <div class="docente-label">Panel del Estudiante</div>
+  <div class="docente-session">
+    <span id="nombreEstudiante"></span>
+    <button class="logout-btn" id="btnCerrarSesion">Cerrar sesión</button>
+  </div>
+</header>
+
+<div class="docente-layout">
+  <aside class="sidebar">
+    <ul>
+      <li><a href="#" onclick="mostrarSeccion('horario'); mostrarHorarioEstudiante()">Consultar Horario</a></li>
+      <li><a href="#" onclick="mostrarSeccion('actividades'); mostrarActividadesEstudiante()">Ver Actividades</a></li>
+      <li><a href="#" onclick="mostrarSeccion('cambiarClave')">Cambiar Contraseña</a></li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+
+    <section id="horario" class="seccion" style="display:none;">
+      <h2>Mi Horario</h2>
+      <table id="tablaHorarioEstudiante">
+        <thead>
+          <tr><th>Materia</th><th>Docente</th><th>Día</th><th>Hora</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="actividades" class="seccion" style="display:none;">
+      <h2>Mis Actividades</h2>
+      <table id="tablaActividadesEstudiante">
+        <thead>
+          <tr><th>Nombre</th><th>Materia</th><th>Descripción</th><th>Fecha Límite</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="cambiarClave" class="seccion" style="display:none;">
+      <h2>Cambiar Contraseña</h2>
+      <form id="formCambioClaveEstudiante" onsubmit="cambiarClaveEstudiante(event)">
+        <label>Contraseña Actual:</label>
+        <input type="password" id="claveActualEstudiante" required>
+
+        <label>Nueva Contraseña:</label>
+        <input type="password" id="nuevaClaveEstudiante" required>
+
+        <label>Confirmar Nueva Contraseña:</label>
+        <input type="password" id="confirmarClaveEstudiante" required>
+
+        <button type="submit">Actualizar Contraseña</button>
+      </form>
+    </section>
+
+  </main>
+</div>
+
 </body>
 </html>

@@ -1,11 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Docente</title>
+  <meta charset="UTF-8">
+  <title>Menu Docente</title>
+ <link rel="stylesheet" href="../css/menudocente.css">
+  <script src="../js/utilidades.js"></script>
+  <script src="../js/menudocente.js" defer></script>
+  <script src="../js/horariodocente.js"></script>
+  <link rel="stylesheet" href="../css/actividadesdocente.css">
+  <script src="../js/canviarcontraseñadocente.js"></script>
+  <script src="../js/actividadesadmin.js"></script>
+
 </head>
 <body>
-    
+
+ <header class="top-header">
+    <div class="logo">miColeWeb</div>
+    <div class="docente-label">Panel del Docente</div>
+    <div class="docente-session">
+        <span id="nombreDocente"></span>
+      <button class="logout-btn" id="btnCerrarSesion">Cerrar sesión</button>
+    </div>
+  </header>
+
+  
+
+  <div class="docente-layout">
+    <aside class="sidebar">
+      <ul>
+       <li><a href="#" onclick="mostrarSeccion('horario'); mostrarHorarioDocente()">Consultar Horario</a></li>
+        <li><a href="#" onclick="mostrarSeccion('actividades')">Gestionar Actividades</a></li>
+        <li><a href="#" onclick="mostrarSeccion('cambiarClave')">Cambiar Contraseña</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+
+      <section id="horario" class="seccion" style="display:none;">
+
+<h2>Mi Horario</h2>
+<table id="tablaHorarioDocente">
+  <thead>
+    <tr>
+      <th>Curso</th>
+      <th>Materia</th>
+      <th>Día</th>
+      <th>Hora</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+      </section>
+
+      <section id="actividades" class="seccion" style="display:none;">
+
+<h2>Gestionar Actividades Académicas</h2>
+
+<form id="formActividadDocente" onsubmit="registrarActividadDocente(event)">
+  <label>Nombre de la Actividad:</label>
+  <input type="text" id="nombreActividadDocente" required>
+
+  <label>Descripción:</label>
+  <textarea id="descripcionActividadDocente" required></textarea>
+
+  <label>Materia Asociada:</label>
+  <select id="materiaActividadDocente" required></select>
+
+  <label>Fecha Límite:</label>
+  <input type="date" id="fechaLimiteDocente" required>
+
+  <button type="submit">Guardar Actividad</button>
+</form>
+
+<h3>Actividades Registradas</h3>
+<table id="tablaActividadesDocente">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Materia</th>
+      <th>Descripción</th>
+      <th>Publicación</th>
+      <th>Fecha Límite</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+
+
+      </section>
+
+
+      <section id="cambiarClave" class="seccion" style="display:none;">
+
+
+<h2>Cambiar Contraseña</h2>
+
+<form id="formCambioClaveDocente" onsubmit="cambiarClaveDocente(event)">
+  <label>Contraseña Actual:</label>
+  <input type="password" id="claveActualDocente" required>
+
+  <label>Nueva Contraseña:</label>
+  <input type="password" id="nuevaClaveDocente" required>
+
+  <label>Confirmar Nueva Contraseña:</label>
+  <input type="password" id="confirmarClaveDocente" required>
+
+  <button type="submit">Actualizar Contraseña</button>
+</form>
+
+
+      </section>
+    </main>
+  </div>
 </body>
 </html>

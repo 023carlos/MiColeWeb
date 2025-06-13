@@ -1,14 +1,297 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrador</title>
+  <meta charset="UTF-8">
+  <title>Panel del Administrador</title>
+  <link rel="stylesheet" href="../css/menuadmi.css">
+  <script src="../js/menuadmin.js" defer></script>
+  <script src="../js/cursoadmi.js" defer></script>
+  <script src="../js/docentesadmin.js"  defer></script>
+  <script src="../js/materiasadmin.js"  defer></script>
+  <script src="../js/estudiantesadmin.js"  defer></script>
+  <script src="../js/asignacionesadmin.js"  defer></script>
 </head>
 <body>
-    
-<a href="../html/gestionarusuario.html">gestionarusuario</a>
+  <!-- Encabezado superior -->
+  <header class="top-header">
+    <div class="logo">miColeWeb</div>
+    <div class="admin-label">Panel de Administración</div>
+    <div class="admin-session">
+      <button class="logout-btn" onclick="cerrarSesion()">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <!-- Contenedor principal -->
+  <div class="admin-layout">
+    <!-- Menú lateral -->
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li><a href="#" onclick="mostrarSeccion('cursos')">Cursos</a></li>
+          <li><a href="#" onclick="mostrarSeccion('materias')">Materias</a></li>
+          <li><a href="#" onclick="mostrarSeccion('docentes')">Docentes</a></li>
+          <li><a href="#" onclick="mostrarSeccion('asignaciones')">Asignaciones</a></li>
+          <li><a href="#" onclick="mostrarSeccion('estudiantes')">Estudiantes</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Contenido dinámico -->
+    <main class="main-content">
+
+      <section id="cursos" class="seccion" style="display:none;">
+        <h2>Gestión de Cursos</h2>
+
+<form id="formCurso" onsubmit="registrarCurso(event)">
+  <label>Nombre del curso:</label>
+  <input type="text" id="nombreCurso" required>
+
+  <label>Estado:</label>
+  <select id="estadoCurso" required>
+    <option value="">Selecione una respuesta</option>
+    <option value="activo">Activo</option>
+    <option value="inactivo">Inactivo</option>
+  </select>
+
+  <button type="submit">Registrar Curso</button>
+</form>
+
+<h3>Cursos Registrados</h3>
+<table id="tablaCursos">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Estado</th>
+      <th>Fecha de Creación</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+      </section>
 
 
+
+      <section id="materias" class="seccion" style="display:none;">
+
+<h2>Gestión de Materias</h2>
+
+<form id="formMateria" onsubmit="registrarMateria(event)">
+  <label>Nombre de la Materia:</label>
+  <input type="text" id="nombreMateria" required>
+
+  <label>Descripción:</label>
+  <input type="text" id="descripcionMateria" required>
+
+  <label>Estado:</label>
+  <select id="estadoMateria" required>
+    <option value="">Selecione una respuesta</option>
+    <option value="activo">Activo</option>
+    <option value="inactivo">Inactivo</option>
+  </select>
+
+  <button type="submit">Registrar Materia</button>
+</form>
+
+<h3>Materias Registradas</h3>
+<table id="tablaMaterias">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th>Estado</th>
+      <th>Fecha Registro</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+      </section>
+
+
+
+      <section id="docentes" class="seccion" style="display:none;">
+
+        <h2>Gestión de Docentes</h2>
+
+<form id="formDocente" onsubmit="registrarDocente(event)">
+  <label>Tipo de Identificación:</label>
+  <select id="tipoIdDocente" required>
+    <option value="">Selecione una respuesta</option>
+    <option value="CC">Cédula de Ciudadanía</option>
+    <option value="CE">Cédula de Extranjería</option>
+    <option value="TI">Tarjeta de Identidad</option>
+  </select>
+
+  <label>Número de Identificación:</label>
+  <input type="number" id="numIdDocente" required>
+
+  <label>Nombres:</label>
+  <input type="text" id="nombresDocente" required>
+
+  <label>Apellidos:</label>
+  <input type="text" id="apellidosDocente" required>
+
+  <label>Fecha de Nacimiento:</label>
+  <input type="date" id="fechaNacDocente" required>
+
+  <label>Teléfono (opcional):</label>
+  <input type="text" id="telefonoDocente">
+
+  <label>Correo Electrónico:</label>
+  <input type="email" id="correoDocente" required>
+
+  <label>Usuario:</label>
+  <input type="text" id="usuarioDocente" required>
+
+  <label>Contraseña:</label>
+  <input type="password" id="claveDocente" required>
+
+  <label>Estado:</label>
+  <select id="estadoDocente" required>
+     <option value="">Selecione una respuesta</option>
+    <option value="activo">Activo</option>
+    <option value="inactivo">Inactivo</option>
+  </select>
+
+  <button type="submit">Registrar Docente</button>
+</form>
+
+<h3>Docentes Registrados</h3>
+<table id="tablaDocentes">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre Completo</th>
+      <th>Identificación</th>
+      <th>Correo</th>
+      <th>Estado</th>
+      <th>Fecha Registro</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+      </section>
+
+
+
+      <section id="asignaciones" class="seccion" style="display:none;">
+
+
+<h2>Asignación de Materias, Docentes y Horarios por Curso</h2>
+
+<form id="formAsignacion" onsubmit="registrarAsignacion(event)">
+  <label>Curso:</label>
+  <select id="cursoAsignacion" required></select>
+
+  <label>Materia:</label>
+  <select id="materiaAsignacion" required></select>
+
+  <label>Docente:</label>
+  <select id="docenteAsignacion" required></select>
+
+  <label>Día:</label>
+  <select id="diaAsignacion" required>
+    <option value="Lunes">Lunes</option>
+    <option value="Martes">Martes</option>
+    <option value="Miércoles">Miércoles</option>
+    <option value="Jueves">Jueves</option>
+    <option value="Viernes">Viernes</option>
+  </select>
+
+  <label>Hora (ej. 07:00 - 08:00):</label>
+  <input type="text" id="horaAsignacion" placeholder="Formato HH:MM - HH:MM" required>
+
+  <button type="submit">Asignar</button>
+</form>
+
+<h3>Asignaciones Realizadas</h3>
+<table id="tablaAsignaciones">
+  <thead>
+    <tr>
+      <th>Curso</th>
+      <th>Materia</th>
+      <th>Docente</th>
+      <th>Día</th>
+      <th>Hora</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+
+      </section>
+
+      
+
+      <section id="estudiantes" class="seccion" style="display:none;">
+
+<h2>Gestión de Estudiantes</h2>
+
+<form id="formEstudiante" onsubmit="registrarEstudiante(event)">
+  <label>Tipo de Identificación:</label>
+  <select id="tipoIdEst" required>
+    <option value="CC">Cédula de Ciudadanía</option>
+    <option value="TI">Tarjeta de Identidad</option>
+  </select>
+
+  <label>Número de Identificación:</label>
+  <input type="number" id="numIdEst" required>
+
+  <label>Nombres:</label>
+  <input type="text" id="nombresEst" required>
+
+  <label>Apellidos:</label>
+  <input type="text" id="apellidosEst" required>
+
+  <label>Fecha de Nacimiento:</label>
+  <input type="date" id="fechaNacEst" required>
+
+  <label>Teléfono (opcional):</label>
+  <input type="text" id="telefonoEst">
+
+  <label>Correo Electrónico:</label>
+  <input type="email" id="correoEst" required>
+
+  <label>Curso Asignado:</label>
+  <select id="cursoEst" required></select>
+
+  <label>Usuario:</label>
+  <input type="text" id="usuarioEst" required>
+
+  <label>Contraseña:</label>
+  <input type="password" id="claveEst" required>
+
+  <label>Estado:</label>
+  <select id="estadoEst" required>
+    <option value="activo">Activo</option>
+    <option value="inactivo">Inactivo</option>
+  </select>
+
+  <button type="submit">Registrar Estudiante</button>
+</form>
+
+<h3>Estudiantes Registrados</h3>
+<table id="tablaEstudiantes">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre Completo</th>
+      <th>Identificación</th>
+      <th>Correo</th>
+      <th>Curso</th>
+      <th>Estado</th>
+      <th>Fecha Registro</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+
+      </section>
+    </main>
+  </div>
 </body>
 </html>
